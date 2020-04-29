@@ -25,6 +25,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'django.contrib.postgres',
     'apps.blog',
 
     'rest_framework',
@@ -68,15 +71,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mysite',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog',
         'USER': 'beks',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+        'PASSWORD': 'blog',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -121,3 +121,5 @@ EMAIL_HOST_USER = 'beksasiveev@gmail.com'
 EMAIL_HOST_PASSWORD = '1017272704'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+SITE_ID = 1
